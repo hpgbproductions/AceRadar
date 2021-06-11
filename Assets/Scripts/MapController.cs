@@ -205,10 +205,11 @@
         }
 
         // Modifies blip of a single target
-        public void ModifyTargetBlip(RadarTarget t, int i, Color sc)
+        public void ModifyTargetBlip(RadarTarget t, int i, Color sc, bool rot)
         {
             t.blipComponent.sprite = SelectSprite(i);
             t.blipComponent.color = sc;
+            t.blipRotatable = rot;
         }
 
         // Removes a single target
