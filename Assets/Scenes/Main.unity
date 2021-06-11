@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2526488}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MapRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88678538}
   - component: {fileID: 88678539}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RingsMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 149375357}
   - component: {fileID: 149375359}
   - component: {fileID: 149375358}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460919226}
   - component: {fileID: 460919227}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Targets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 464561250}
   - component: {fileID: 464561252}
   - component: {fileID: 464561251}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RingMedium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 930069727}
   - component: {fileID: 930069729}
   - component: {fileID: 930069728}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RingSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 0.02
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 1489932619}
   - component: {fileID: 1489932621}
   - component: {fileID: 1489932620}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 1662956623}
   - component: {fileID: 1662956625}
   - component: {fileID: 1662956624}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RingLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1713387569}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RingsParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -123,8 +123,6 @@
                 writer.Write(frcol.g);
                 writer.Write(frcol.b);
             }
-
-
         }
 
         private void SetPosition(float x, float y)

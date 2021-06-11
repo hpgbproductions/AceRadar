@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2526488}
-  - component: {fileID: 3816137807599783616}
+  - component: {fileID: 976461497448123829}
   m_Layer: 5
   m_Name: MapRoot
   m_TagString: Untagged
@@ -41,7 +41,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &3816137807599783616
+--- !u!114 &976461497448123829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: bb362245-3a4e-4201-809e-24807083b492
+  ObjectId: a80ea910-92c5-4729-901f-fc2ca5b4b1e5
 --- !u!1 &88678537
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88678538}
   - component: {fileID: 88678539}
-  - component: {fileID: 2718579034126396951}
+  - component: {fileID: 6543147587527502744}
   m_Layer: 5
   m_Name: RingsMask
   m_TagString: Untagged
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2718579034126396951
+--- !u!114 &6543147587527502744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 2b02cd5b-cb41-412a-99c0-78c2f8f0a187
+  ObjectId: fc3513c2-4357-4364-89f3-ab3954e9d11b
 --- !u!1 &149375356
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 149375357}
   - component: {fileID: 149375359}
   - component: {fileID: 149375358}
-  - component: {fileID: 4395037344760433724}
+  - component: {fileID: 1293655632346995487}
   m_Layer: 5
   m_Name: Lines
   m_TagString: Untagged
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4395037344760433724
+--- !u!114 &1293655632346995487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 4348fe43-95c7-448b-8def-cec167c44235
+  ObjectId: c5fc4584-ffe6-49da-9f4a-6fc8336974d0
 --- !u!1 &173810065
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 173810066}
   - component: {fileID: 173810068}
   - component: {fileID: 173810067}
-  - component: {fileID: 2894158297088836561}
+  - component: {fileID: 282119262409043356}
   m_Layer: 5
   m_Name: Bg
   m_TagString: Untagged
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2894158297088836561
+--- !u!114 &282119262409043356
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,76 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 5b48e2db-ec8f-4357-828f-9cec0e157633
---- !u!1 &319618072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 319618074}
-  - component: {fileID: 319618073}
-  - component: {fileID: 8270210297125591939}
-  m_Layer: 0
-  m_Name: AceRadar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &319618074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319618072}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1245396545}
-  - {fileID: 841116683}
-  - {fileID: 4741942121544046690}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &319618073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1430096057, guid: 0ae1b6aafcdc6bc46b35491a5c18721e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8270210297125591939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 463027472, guid: 3cde37892b4f7594bbbc3ac6c74ecab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CustomScripts:
-  - Component: {fileID: 0}
-    ScriptData: 0001000000ffffffff01000000000000000c020000004f41636552616461722d417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0c030000004d556e697479456e67696e652e436f72654d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0c040000004b556e697479456e67696e652e55494d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001641636552616461722e4d6170436f6e74726f6c6c65720e0000000f4973526f6f74436f6d706f6e656e741044656661756c74426c6970436f6c6f7215496e74657276616c436865636b4e65774974656d730b4d617053657474696e6773094d617043616e766173104d617054617267657473506172656e7410546172676574426c697050726566616217506c6179657241697263726166745472616e73666f726d114d617052696e67735472616e73666f726d054169725f73054169725f6c05476e645f7305476e645f6c05534c696e6500040004040404040404040404040111556e697479456e67696e652e436f6c6f7203000000081441636552616461722e4d617053657474696e67730200000012556e697479456e67696e652e43616e7661730400000016556e697479456e67696e652e47616d654f626a6563740300000016556e697479456e67696e652e47616d654f626a6563740300000015556e697479456e67696e652e5472616e73666f726d0300000019556e697479456e67696e652e526563745472616e73666f726d0300000012556e697479456e67696e652e5370726974650300000012556e697479456e67696e652e5370726974650300000012556e697479456e67696e652e5370726974650300000012556e697479456e67696e652e5370726974650300000012556e697479456e67696e652e53707269746503000000020000000105fbffffff11556e697479456e67696e652e436f6c6f72040000000172016701620161000000000b0b0b0b03000000000000000000000000000000000000000f0000000906000000090700000009080000000909000000090a000000090b000000090c000000090d000000090e000000090f000000091000000005060000001441636552616461722e4d617053657474696e6773040000000f4973526f6f74436f6d706f6e656e74084861734572726f72084f626a65637449640d436f6d706f6e656e745479706500000101010102000000000006110000002466643039626561342d626636612d343239322d383739662d32326338346262336335623406120000006541636552616461722e4d617053657474696e67732c2041636552616461722d417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c050700000012556e697479456e67696e652e43616e766173040000000f4973526f6f74436f6d706f6e656e74084861734572726f72084f626a65637449640d436f6d706f6e656e745479706500000101010104000000000006130000002439623636396564352d373134322d343161642d613038312d32613234323032363639316606140000005f556e697479456e67696e652e43616e7661732c20556e697479456e67696e652e55494d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c050800000016556e697479456e67696e652e47616d654f626a65637402000000084861734572726f72084f626a6563744964000101030000000006150000002466353562383366632d323364312d343735302d616162302d6637313965383636376339320109000000080000000006160000002462646333633534642d643263362d343131322d623664342d323333666435336336633834050a00000015556e697479456e67696e652e5472616e73666f726d040000000f4973526f6f74436f6d706f6e656e74084861734572726f72084f626a65637449640d436f6d706f6e656e745479706500000101010103000000000006170000002437626537353937322d393034372d343931612d393338622d323665363038646166336537061800000064556e697479456e67696e652e5472616e73666f726d2c20556e697479456e67696e652e436f72654d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c050b00000019556e697479456e67696e652e526563745472616e73666f726d040000000f4973526f6f74436f6d706f6e656e74084861734572726f72084f626a65637449640d436f6d706f6e656e745479706500000101010103000000000006190000002437393764333930382d633264652d343632642d386237612d623332623561313765303762061a00000068556e697479456e67696e652e526563745472616e73666f726d2c20556e697479456e67696e652e436f72654d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c050c00000012556e697479456e67696e652e53707269746502000000084861734572726f72094173736574506174680001010300000000061b0000001c4173736574732f537570706c792f61697263726166742d732e706e67010d0000000c00000000061c0000001c4173736574732f537570706c792f61697263726166742d6c2e706e67010e0000000c00000000061d0000001a4173736574732f537570706c792f67726f756e642d732e706e67010f0000000c00000000061e0000001a4173736574732f537570706c792f67726f756e642d6c2e706e6701100000000c00000000061f000000164173736574732f537570706c792f6c696e652e706e670b
-    ScriptType: AceRadar.MapController, AceRadar-Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - Component: {fileID: 0}
-    ScriptData: 0001000000ffffffff01000000000000000c020000004f41636552616461722d417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0c030000004d556e697479456e67696e652e436f72654d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0c0400000045556e697479456e67696e652e55492c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001441636552616461722e4d617053657474696e6773060000000f4973526f6f74436f6d706f6e656e74065a6f6f6d496e075a6f6f6d4f75740d4d617043616e766173526563740b4d6170526f6f7452656374104d61704672616d6552656e64657265720004040404040115556e697479456e67696e652e4b6579436f64655b5d0300000015556e697479456e67696e652e4b6579436f64655b5d0300000019556e697479456e67696e652e526563745472616e73666f726d0300000019556e697479456e67696e652e526563745472616e73666f726d0300000014556e697479456e67696e652e55492e496d6167650400000002000000010905000000090600000009070000000908000000090900000007050000000001000000010000000413556e697479456e67696e652e4b6579436f64650300000005f6ffffff13556e697479456e67696e652e4b6579436f6465010000000776616c75655f5f0008030000006d00000007060000000001000000010000000413556e697479456e67696e652e4b6579436f64650300000001f5fffffff6ffffff6e000000050700000019556e697479456e67696e652e526563745472616e73666f726d040000000f4973526f6f74436f6d706f6e656e74084861734572726f72084f626a65637449640d436f6d706f6e656e7454797065000001010101030000000000060c0000002439623636396564352d373134322d343161642d613038312d326132343230323636393166060d00000068556e697479456e67696e652e526563745472616e73666f726d2c20556e697479456e67696e652e436f72654d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0108000000070000000000060e0000002462623336323234352d336134652d343230312d383039652d323438303730383362343932060f00000068556e697479456e67696e652e526563745472616e73666f726d2c20556e697479456e67696e652e436f72654d6f64756c652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c050900000014556e697479456e67696e652e55492e496d616765040000000f4973526f6f74436f6d706f6e656e74084861734572726f72084f626a65637449640d436f6d706f6e656e745479706500000101010104000000000006100000002436666361633631302d646561322d343832652d613136392d38343465326335396562613206110000005b556e697479456e67696e652e55492e496d6167652c20556e697479456e67696e652e55492c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0b
-    ScriptType: AceRadar.MapSettings, AceRadar-Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  ObjectId: fd09bea4-bf6a-4292-879f-22c84bb3c5b4
+  ObjectId: 67e91ba7-abd2-4841-8e6d-1b390035ea14
 --- !u!1 &460919225
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460919226}
   - component: {fileID: 460919227}
-  - component: {fileID: 2766078024941601331}
+  - component: {fileID: 705183526562777617}
   m_Layer: 5
   m_Name: Targets
   m_TagString: Untagged
@@ -415,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2766078024941601331
+--- !u!114 &705183526562777617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -428,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: f55b83fc-23d1-4750-aab0-f719e8667c92
+  ObjectId: a7996d9a-3500-4a32-a163-2121d9ce40a6
 --- !u!1 &464561249
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +371,7 @@ GameObject:
   - component: {fileID: 464561250}
   - component: {fileID: 464561252}
   - component: {fileID: 464561251}
-  - component: {fileID: 2110234036539850558}
+  - component: {fileID: 8115937509324202500}
   m_Layer: 5
   m_Name: RingMedium
   m_TagString: Untagged
@@ -504,7 +435,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2110234036539850558
+--- !u!114 &8115937509324202500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -517,52 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 4de1a065-66cd-4724-a935-96467c339374
---- !u!1 &841116682
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 841116683}
-  - component: {fileID: 4003240399899650103}
-  m_Layer: 0
-  m_Name: PlayerAircraftTracker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &841116683
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841116682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 319618074}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4003240399899650103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841116682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 463027472, guid: 3cde37892b4f7594bbbc3ac6c74ecab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CustomScripts: []
-  ObjectId: 7be75972-9047-491a-938b-26e608daf3e7
+  ObjectId: 4781bdc4-aa5c-4dee-a4e9-f0af4125e582
 --- !u!1 &930069726
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +460,7 @@ GameObject:
   - component: {fileID: 930069727}
   - component: {fileID: 930069729}
   - component: {fileID: 930069728}
-  - component: {fileID: 2221827254041910470}
+  - component: {fileID: 3256410991944461726}
   m_Layer: 5
   m_Name: RingSmall
   m_TagString: Untagged
@@ -638,7 +524,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2221827254041910470
+--- !u!114 &3256410991944461726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 02be806e-ac1b-4e6e-bab4-966956a63494
+  ObjectId: f1877a01-46bf-4559-bc26-9a218e4838e2
 --- !u!1 &1245396544
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +550,7 @@ GameObject:
   - component: {fileID: 1245396548}
   - component: {fileID: 1245396547}
   - component: {fileID: 1245396546}
-  - component: {fileID: 7933300339827854897}
+  - component: {fileID: 5347939834281604830}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -684,7 +570,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2526488}
-  m_Father: {fileID: 319618074}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -752,7 +638,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7933300339827854897
+--- !u!114 &5347939834281604830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -765,7 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 9b669ed5-7142-41ad-a081-2a242026691f
+  ObjectId: 899070a6-f2b6-47b6-a508-ba6282cf509d
 --- !u!1 &1489932618
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +663,7 @@ GameObject:
   - component: {fileID: 1489932619}
   - component: {fileID: 1489932621}
   - component: {fileID: 1489932620}
-  - component: {fileID: 2926514799958941931}
+  - component: {fileID: 2968405056581912495}
   m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
@@ -841,7 +727,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2926514799958941931
+--- !u!114 &2968405056581912495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -854,7 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 6fcac610-dea2-482e-a169-844e2c59eba2
+  ObjectId: 05eef28a-5cd5-4b4c-bad1-8e83303c39f5
 --- !u!1 &1662956622
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +752,7 @@ GameObject:
   - component: {fileID: 1662956623}
   - component: {fileID: 1662956625}
   - component: {fileID: 1662956624}
-  - component: {fileID: 5630337172885887485}
+  - component: {fileID: 277273875744945382}
   m_Layer: 5
   m_Name: RingLarge
   m_TagString: Untagged
@@ -930,7 +816,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5630337172885887485
+--- !u!114 &277273875744945382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -943,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 22df33a7-26fe-4693-9848-b1af5916d21e
+  ObjectId: 23061e5d-414a-4f0c-aa15-8e1977bb3aa1
 --- !u!1 &1713387568
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,7 +839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1713387569}
-  - component: {fileID: 1739520582672781204}
+  - component: {fileID: 6745690122437118178}
   m_Layer: 5
   m_Name: RingsParent
   m_TagString: Untagged
@@ -983,7 +869,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1739520582672781204
+--- !u!114 &6745690122437118178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -996,139 +882,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 797d3908-c2de-462d-8b7a-b32b5a17e07b
---- !u!1 &3415722764849621946
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3415722764849621940}
-  - component: {fileID: 3415722764849621947}
-  - component: {fileID: 3415722764849621941}
-  - component: {fileID: 7183350194862157229}
-  m_Layer: 0
-  m_Name: TargetBlipPrefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3415722764849621940
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3415722764849621946}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4741942121544046690}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 32, y: 32}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3415722764849621947
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3415722764849621946}
-  m_CullTransparentMesh: 0
---- !u!114 &3415722764849621941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3415722764849621946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &7183350194862157229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3415722764849621946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 463027472, guid: 3cde37892b4f7594bbbc3ac6c74ecab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CustomScripts: []
-  ObjectId: bdc3c54d-d2c6-4112-b6d4-233fd53c6c84
---- !u!1 &4778962842070718331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4741942121544046690}
-  - component: {fileID: 311050580339493988}
-  m_Layer: 0
-  m_Name: __mod-prefabs__
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4741942121544046690
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778962842070718331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3415722764849621940}
-  m_Father: {fileID: 319618074}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &311050580339493988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778962842070718331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 463027472, guid: 3cde37892b4f7594bbbc3ac6c74ecab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CustomScripts: []
-  ObjectId: 8d673b39-a256-459b-abd4-09381e39e103
+  ObjectId: bd962bae-c1cd-4d8f-8bf7-0d03aa6bf1fd
