@@ -170,7 +170,7 @@
 
         // Registers a single target.
         // May be manually called to register non-supported component types.
-        public void AddTargetItem(Component c, Sprite s, Color sc, bool rot = false)
+        public RadarTarget AddTargetItem(Component c, Sprite s, Color sc, bool rot = false)
         {
             GameObject newRadarBlip = Instantiate(TargetBlipPrefab, MapTargetsParent.transform);
             RadarBlipObjects.Add(newRadarBlip);
@@ -183,6 +183,7 @@
             RadarTargets.Add(newRadarTarget);
 
             Debug.Log(string.Format("Registered new RadarTarget: {0} ({1})", newRadarTarget.gameObject.name, newRadarTarget.gameScriptType.Name));
+            return newRadarTarget;
         }
 
         // Checks for supported items that are not in RadarTargets
