@@ -260,7 +260,7 @@
 
         // Find the registered target associated with a given component
         // Returns null if no target is associated with the component
-        private RadarTarget FindTargetFromComponent(Component c)
+        public RadarTarget FindTargetFromComponent(Component c)
         {
             foreach (RadarTarget t in RadarTargets)
             {
@@ -274,7 +274,7 @@
 
         // Find the registered target associated with a given GameObject
         // Returns null if no target is associated with the GameObject
-        private RadarTarget FindTargetFromGameObject(GameObject g)
+        public RadarTarget FindTargetFromGameObject(GameObject g)
         {
             foreach (RadarTarget t in RadarTargets)
             {
