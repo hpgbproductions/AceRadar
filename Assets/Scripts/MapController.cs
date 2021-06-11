@@ -204,19 +204,10 @@
         }
 
         // Modifies blip of a single target
-        public Component ModifyTargetBlip(Component c, int i, Color sc)
+        public void ModifyTargetBlip(RadarTarget t, int i, Color sc)
         {
-            RadarTarget t = FindTargetFromComponent(c);
             t.blipComponent.sprite = SelectSprite(i);
             t.blipComponent.color = sc;
-            return c;
-        }
-        public GameObject ModifyTargetBlip(GameObject g, int i, Color sc)
-        {
-            RadarTarget t = FindTargetFromGameObject(g);
-            t.blipComponent.sprite = SelectSprite(i);
-            t.blipComponent.color = sc;
-            return g;
         }
 
         // Removes a single target
