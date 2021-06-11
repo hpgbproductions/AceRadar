@@ -446,11 +446,8 @@ MonoBehaviour:
   Gnd_s: {fileID: 21300000, guid: 9f4b556b9f5e20e4991835c00c483f8b, type: 3}
   Gnd_l: {fileID: 21300000, guid: c535463a3ba53bb419b21e54c1c70c38, type: 3}
   SLine: {fileID: 21300000, guid: fb9f66891ad1e1b40ad8cee9167cf1f2, type: 3}
-  RadarBlipObjects: []
-  RadarBlipComponents: []
   DefaultBlipColor: {r: 0, g: 0, b: 0, a: 0}
-  MapRadius: 16000
-  IntervalCheckNewItems: 12
+  IntervalCheckNewItems: 15
 --- !u!1 &460919225
 GameObject:
   m_ObjectHideFlags: 0

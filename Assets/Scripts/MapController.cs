@@ -23,11 +23,12 @@
         [SerializeField] private Sprite Gnd_s;
         [SerializeField] private Sprite Gnd_l;
         [SerializeField] private Sprite SLine;
+        private Sprite[] AvailableSprites;
 
         // Targets
-        public List<RadarTarget> RadarTargets;
-        public List<GameObject> RadarBlipObjects;
-        public List<Image> RadarBlipComponents;
+        private List<RadarTarget> RadarTargets;
+        private List<GameObject> RadarBlipObjects;
+        private List<Image> RadarBlipComponents;
 
         private string[] SupportedGroundTargetTypes = new string[]
         {
@@ -59,7 +60,7 @@
         public Color DefaultBlipColor;
 
         // Zoom settings
-        public float MapRadius = 16000f;
+        private float MapRadius = 16000f;
         private int TargetMapSizeIndex = 1;
         private float[] MapSizes = new float[] { 8000f, 16000f, 32000f };
         private float[] MapScaleRates = new float[] { 80000f, 160000f };
@@ -68,7 +69,7 @@
         private float ResizeCooldownTimer = 0f;
 
         // Timing to check for new items
-        public int IntervalCheckNewItems = 20;
+        public int IntervalCheckNewItems = 15;
         private int NextCheckNewItems = 1;
 
         // Auto-hide map outside of sandbox
@@ -87,6 +88,8 @@
             Array.Copy(SupportedGroundTargetTypes, SupportedTargetTypes, SupportedGroundTargetTypes.Length);
             Array.Copy(SupportedAirTargetTypes, 0, SupportedTargetTypes, SupportedGroundTargetTypes.Length, SupportedAirTargetTypes.Length);
             Array.Copy(SupportedWeaponTargetTypes, 0, SupportedTargetTypes, SupportedGroundTargetTypes.Length + SupportedAirTargetTypes.Length, SupportedWeaponTargetTypes.Length);
+
+            AvailableSprites = new Sprite[] { Air_s, Air_l, Gnd_s, Gnd_l, SLine };
 
             DefaultBlipColor = GetAceRadarColor(AceRadarColors.White);
         }
@@ -201,11 +204,19 @@
         }
 
         // Modifies blip of a single target
-        public void ModifyTargetBlip(Component c, Sprite s, Color sc)
+        public Component ModifyTargetBlip(Component c, int i, Color sc)
         {
             RadarTarget t = FindTargetFromComponent(c);
-            t.blipComponent.sprite = s;
+            t.blipComponent.sprite = SelectSprite(i);
             t.blipComponent.color = sc;
+            return c;
+        }
+        public GameObject ModifyTargetBlip(GameObject g, int i, Color sc)
+        {
+            RadarTarget t = FindTargetFromGameObject(g);
+            t.blipComponent.sprite = SelectSprite(i);
+            t.blipComponent.color = sc;
+            return g;
         }
 
         // Removes a single target
@@ -254,6 +265,20 @@
             foreach (RadarTarget t in RadarTargets)
             {
                 if (c.gameObject == t.gameObject)
+                {
+                    return t;
+                }
+            }
+            return null;
+        }
+
+        // Find the registered target associated with a given GameObject
+        // Returns null if no target is associated with the GameObject
+        private RadarTarget FindTargetFromGameObject(GameObject g)
+        {
+            foreach (RadarTarget t in RadarTargets)
+            {
+                if (g.gameObject == t.gameObject)
                 {
                     return t;
                 }
@@ -353,6 +378,19 @@
                     break;
             }
             return output;   
+        }
+
+        private Sprite SelectSprite(int i)
+        {
+            if (i < 0 || i >= AvailableSprites.Length)
+            {
+                Debug.LogError("The index does not correspond to an available Sprite!");
+                return null;
+            }
+            else
+            {
+                return AvailableSprites[i];
+            }
         }
     }
 
