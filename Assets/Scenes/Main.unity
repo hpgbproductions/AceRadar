@@ -436,6 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MapSettings: {fileID: 319618075}
   MapCanvas: {fileID: 1245396548}
+  MapRootObject: {fileID: 2526487}
   MapTargetsParent: {fileID: 460919225}
   TargetBlipPrefab: {fileID: 244406698107057954, guid: 017e564eed4d7d945a298c6c10863193,
     type: 3}

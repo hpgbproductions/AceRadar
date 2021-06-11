@@ -13,6 +13,7 @@
         [SerializeField] private MapSettings MapSettings;
 
         [SerializeField] private Canvas MapCanvas;
+        [SerializeField] private GameObject MapRootObject;
         [SerializeField] private GameObject MapTargetsParent;
         [SerializeField] private GameObject TargetBlipPrefab;
         [SerializeField] private Transform PlayerAircraftTransform;
@@ -103,12 +104,12 @@
             // Entered the sandbox
             if (InSandboxCurrent && !InSandboxPrevious)
             {
-                MapCanvas.enabled = true;
+                MapRootObject.SetActive(true);
             }
             // Exited the sandbox
             else if (!InSandboxCurrent && InSandboxPrevious)
             {
-                MapCanvas.enabled = false;
+                MapRootObject.SetActive(false);
 
                 // Clear item list
                 Debug.Log(string.Format("Cleared {0} RadarTargets", RadarTargets.Count));

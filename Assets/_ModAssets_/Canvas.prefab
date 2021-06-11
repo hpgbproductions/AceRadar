@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2526488}
-  - component: {fileID: 976461497448123829}
+  - component: {fileID: 8720011876845145796}
   m_Layer: 5
   m_Name: MapRoot
   m_TagString: Untagged
@@ -41,7 +41,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &976461497448123829
+--- !u!114 &8720011876845145796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: a80ea910-92c5-4729-901f-fc2ca5b4b1e5
+  ObjectId: c8c0e8d7-ac41-41b0-8edf-dc8572bcf92a
 --- !u!1 &88678537
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88678538}
   - component: {fileID: 88678539}
-  - component: {fileID: 6543147587527502744}
+  - component: {fileID: 6680742679397125010}
   m_Layer: 5
   m_Name: RingsMask
   m_TagString: Untagged
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6543147587527502744
+--- !u!114 &6680742679397125010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: fc3513c2-4357-4364-89f3-ab3954e9d11b
+  ObjectId: 0feb06a2-8be0-4ccc-ac9a-53690d144660
 --- !u!1 &149375356
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 149375357}
   - component: {fileID: 149375359}
   - component: {fileID: 149375358}
-  - component: {fileID: 1293655632346995487}
+  - component: {fileID: 7763507029924355039}
   m_Layer: 5
   m_Name: Lines
   m_TagString: Untagged
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1293655632346995487
+--- !u!114 &7763507029924355039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: c5fc4584-ffe6-49da-9f4a-6fc8336974d0
+  ObjectId: 3cdb2c64-1bc6-4114-ab2d-ca1111ddb364
 --- !u!1 &173810065
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 173810066}
   - component: {fileID: 173810068}
   - component: {fileID: 173810067}
-  - component: {fileID: 282119262409043356}
+  - component: {fileID: 879115035505217176}
   m_Layer: 5
   m_Name: Bg
   m_TagString: Untagged
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &282119262409043356
+--- !u!114 &879115035505217176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 67e91ba7-abd2-4841-8e6d-1b390035ea14
+  ObjectId: 73b43ece-9ae7-4530-ab7b-90a0a80fd892
 --- !u!1 &460919225
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460919226}
   - component: {fileID: 460919227}
-  - component: {fileID: 705183526562777617}
+  - component: {fileID: 3301484012523210146}
   m_Layer: 5
   m_Name: Targets
   m_TagString: Untagged
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &705183526562777617
+--- !u!114 &3301484012523210146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: a7996d9a-3500-4a32-a163-2121d9ce40a6
+  ObjectId: 562ed00a-8af5-487a-a415-544490dbdea0
 --- !u!1 &464561249
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 464561250}
   - component: {fileID: 464561252}
   - component: {fileID: 464561251}
-  - component: {fileID: 8115937509324202500}
+  - component: {fileID: 7992745615129138076}
   m_Layer: 5
   m_Name: RingMedium
   m_TagString: Untagged
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8115937509324202500
+--- !u!114 &7992745615129138076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 4781bdc4-aa5c-4dee-a4e9-f0af4125e582
+  ObjectId: 68f91a69-683c-4231-801e-2767464eaacc
 --- !u!1 &930069726
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 930069727}
   - component: {fileID: 930069729}
   - component: {fileID: 930069728}
-  - component: {fileID: 3256410991944461726}
+  - component: {fileID: 1858655050398241051}
   m_Layer: 5
   m_Name: RingSmall
   m_TagString: Untagged
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3256410991944461726
+--- !u!114 &1858655050398241051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: f1877a01-46bf-4559-bc26-9a218e4838e2
+  ObjectId: 70d9550a-8bec-4583-ba01-e68821f5cd55
 --- !u!1 &1245396544
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 1245396548}
   - component: {fileID: 1245396547}
   - component: {fileID: 1245396546}
-  - component: {fileID: 5347939834281604830}
+  - component: {fileID: 1620670849985318742}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -565,9 +565,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245396544}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.79791665, y: 0.79791665, z: 0.79791665}
   m_Children:
   - {fileID: 2526488}
   m_Father: {fileID: 0}
@@ -575,9 +575,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 766, y: 384.5}
+  m_SizeDelta: {x: 1920, y: 963.7598}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1245396548
 Canvas:
   m_ObjectHideFlags: 0
@@ -587,7 +587,7 @@ Canvas:
   m_GameObject: {fileID: 1245396544}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 0.02
   m_PixelPerfect: 0
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5347939834281604830
+--- !u!114 &1620670849985318742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 899070a6-f2b6-47b6-a508-ba6282cf509d
+  ObjectId: bff80ac6-6c74-4394-bb44-e1f133f23ff2
 --- !u!1 &1489932618
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 1489932619}
   - component: {fileID: 1489932621}
   - component: {fileID: 1489932620}
-  - component: {fileID: 2968405056581912495}
+  - component: {fileID: 1289223694676861981}
   m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2968405056581912495
+--- !u!114 &1289223694676861981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 05eef28a-5cd5-4b4c-bad1-8e83303c39f5
+  ObjectId: 9982e3e8-7825-4f11-9c9f-dca9d9eaaaec
 --- !u!1 &1662956622
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 1662956623}
   - component: {fileID: 1662956625}
   - component: {fileID: 1662956624}
-  - component: {fileID: 277273875744945382}
+  - component: {fileID: 7132196928862094300}
   m_Layer: 5
   m_Name: RingLarge
   m_TagString: Untagged
@@ -816,7 +816,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &277273875744945382
+--- !u!114 &7132196928862094300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: 23061e5d-414a-4f0c-aa15-8e1977bb3aa1
+  ObjectId: f7c820e5-56d5-4138-959b-0b8ce83a0a46
 --- !u!1 &1713387568
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1713387569}
-  - component: {fileID: 6745690122437118178}
+  - component: {fileID: 2765142742160345307}
   m_Layer: 5
   m_Name: RingsParent
   m_TagString: Untagged
@@ -869,7 +869,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6745690122437118178
+--- !u!114 &2765142742160345307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -882,4 +882,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomScripts: []
-  ObjectId: bd962bae-c1cd-4d8f-8bf7-0d03aa6bf1fd
+  ObjectId: 56eead7b-d5aa-49a0-a73f-f20a8bc36598
