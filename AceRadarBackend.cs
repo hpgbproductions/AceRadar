@@ -19,7 +19,12 @@ public class AceRadarBackend : MonoBehaviour
     private MethodInfo InfoFindTargetFromComponent;
     private MethodInfo InfoFindTargetFromGameObject;
 
-    private void Start()
+    /// <summary>
+    /// Whether AceRadar is loaded.
+    /// </summary>
+    public bool Initialized = false;
+
+    private void Awake()
     {
         Component[] components = FindObjectsOfType<Component>();
         foreach (Component c in components)
@@ -36,6 +41,8 @@ public class AceRadarBackend : MonoBehaviour
             Debug.LogError("AceRadarBackend cannot locate MapController! (" + Assembly.GetExecutingAssembly().GetName() + ")\nTroubleshooting:\n" +
                 "- Ensure that Mod Load Priority is more than 900.\n" +
                 "- If manually enabling mods, enable AceRadar before this mod.");
+            // Initialized = false;
+            return;
         }
 
         InfoDefaultBlipColor = ControllerType.GetField("DefaultBlipColor");
@@ -48,6 +55,8 @@ public class AceRadarBackend : MonoBehaviour
         InfoFindTargetFromComponent = ControllerType.GetMethod("FindTargetFromComponent");
         InfoFindTargetFromGameObject = ControllerType.GetMethod("FindTargetFromGameObject");
         RadarTargetType = InfoFindTargetFromGameObject.ReturnType;
+
+        Initialized = true;
     }
 
     public void SetDefaultBlipColor(AceRadarColors color)
