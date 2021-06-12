@@ -139,6 +139,7 @@
                 {
                     if (target.CheckDeleted())
                     {
+                        target.blipObject.SetActive(false);
                         RemoveTargetItem(target);
                     }
                     else if (target.CheckShouldHideBlip())
@@ -402,6 +403,7 @@
         public Image blipComponent;
         public bool blipRotatable;
 
+        public bool targetDestroyed;
         public bool? forceShouldHideBlip;
 
         public RadarTarget(Component script, GameObject bo, Image bc, bool rot = false)
@@ -416,6 +418,7 @@
             blipComponent = bc;
             blipRotatable = rot;
 
+            targetDestroyed = false;
             forceShouldHideBlip = null;
 
             if (gameScriptType.Name == "AiControlledAircraftScript")
@@ -441,7 +444,7 @@
             }
             else if (CheckDeleted() || !gameObject.activeSelf)
             {
-                return false;
+                return true;
             }
             else if (gameScriptType.Name == "RotatingMissileLauncherScript")
             {
