@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Jundroo.SimplePlanes.ModTools.PrefabProxies;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
@@ -19,8 +21,15 @@ public class AceRadarBackend : MonoBehaviour
     private MethodInfo InfoFindTargetFromComponent;
     private MethodInfo InfoFindTargetFromGameObject;
 
+    private string[] GroundTargetTypes = new string[]
+    {
+        "RotatingMissileLauncherScript",
+        "SinkableShipScript",
+        "AntiAircraftTankScript"
+    };
+
     /// <summary>
-    /// Whether AceRadar is loaded.
+    /// True if AceRadar is loaded and referenced properly.
     /// </summary>
     public bool Initialized = false;
 
@@ -67,6 +76,11 @@ public class AceRadarBackend : MonoBehaviour
     public void SetCheckInterval(int fcount)
     {
         InfoIntervalCheckNewItems.SetValue(Controller, fcount);
+    }
+
+    public int GetCheckInterval()
+    {
+        return (int)InfoIntervalCheckNewItems.GetValue(Controller);
     }
 
     /// <summary>
@@ -133,6 +147,39 @@ public class AceRadarBackend : MonoBehaviour
             return InfoFindTargetFromGameObject.Invoke(Controller, new object[] { obj });
         else
             return obj;
+    }
+
+    /// <summary>
+    /// Searches for a target using a suitable ground target proxy, and sets the radar blip style.
+    /// </summary>
+    /// <param name="enemyProxy">Ship, missile launcher, or AA tank proxy.</param>
+    public void FindAndModifyTargetBlip(PrefabProxy enemyProxy, AceRadarSprites sprite, AceRadarColors color, bool rotatable = false)
+    {
+        // The target associated with a proxy is in an immediate child of the proxy GameObject
+        GameObject targetObject = null;
+
+        for (int i = 0; i < enemyProxy.transform.childCount; i++)
+        {
+            GameObject childObject = enemyProxy.transform.GetChild(i).gameObject;
+            Component[] childComponents = childObject.GetComponents<Component>();
+            bool childContainsTarget = false;
+
+            foreach (Component c in childComponents)
+            {
+                if (GroundTargetTypes.Contains(c.GetType().Name))
+                {
+                    childContainsTarget = true;
+                    targetObject = childObject;
+                    break;
+                }
+            }
+
+            if (childContainsTarget)
+            {
+                ModifyTargetBlip((GameObject)targetObject, sprite, color, rotatable);
+                return;
+            }
+        }
     }
 
     /// <summary>
