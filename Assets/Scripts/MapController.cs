@@ -79,7 +79,7 @@
         private bool InLevel = false;
         private bool InDesigner = false;
 
-        private void Start()
+        private void Awake()
         {
             RadarTargets = new List<RadarTarget>(16);
             RadarBlipObjects = new List<GameObject>(16);
