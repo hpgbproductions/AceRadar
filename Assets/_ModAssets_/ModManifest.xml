@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ModManifest buildID="d41b1d1e-fae9-475d-a470-eaa2efa09f71">
-  <Mod name="Ace Radar" author="hpgbproductions" versionMajor="1" versionMinor="0" loadPriority="900" lastUpdated="2021-06-12T16:09:07.5204481Z" apiVersion="1.0.0.0" description="Ace Combat-styled radar. Marks ground targets, air targets, and weapons.&#xA;&#xA;External scripts may be used to change the style of markers, or manually register non-supported objects. View the mod page or repository for more information.&#xA;&#xA;Default controls:&#xA;Zoom Out: N&#xA;Zoom In: M">
+<ModManifest buildID="a52f6278-22df-46f8-8e4e-9fbe2ed07fa5">
+  <Mod name="Ace Radar" author="hpgbproductions" versionMajor="1" versionMinor="0" loadPriority="900" lastUpdated="2021-06-12T20:29:05.3229808Z" apiVersion="1.0.0.0" description="Ace Combat-styled radar. Marks ground targets, air targets, and weapons.&#xA;&#xA;External scripts may be used to change the style of markers, or manually register non-supported objects. View the mod page or repository for more information.&#xA;&#xA;Default controls:&#xA;Zoom Out: N&#xA;Zoom In: M">
     <Steam title="" visibility="Public" previewPath="" language="English" tags="">
       <description></description>
     </Steam>

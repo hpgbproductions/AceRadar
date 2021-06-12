@@ -442,7 +442,7 @@
             {
                 return (bool)forceShouldHideBlip;
             }
-            else if (CheckDeleted() || !gameObject.activeSelf)
+            else if (CheckDeleted() || !gameObject.activeInHierarchy)
             {
                 return true;
             }
