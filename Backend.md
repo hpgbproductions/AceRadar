@@ -38,6 +38,8 @@ The `AceRadarBackend.cs` script performs reflection behind the scenes, making Ac
 
 ### Public Fields
 
+At the time of writing, the copy of AceRadarBackend provided in this repository is identical to the one in Teki no Kichi 2 Ver1.1. The copy in AceRadar Vanilla Addon is older and has fewer features.
+
 **Initialized**
 
 - `public bool Initialized`
