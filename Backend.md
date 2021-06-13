@@ -9,7 +9,13 @@ The `AceRadarBackend.cs` script performs reflection behind the scenes, making Ac
 - Users should not include AceRadar directly into SPMODs. Instead, AceRadarBackend should be used.
 - Users are free to use and modify AceRadarBackend for SPMODs.
 - Users may freely distribute AceRadarBackend or its derivatives.
+
+**[ Using the Backend ]**
 - **If values in AceRadar are modified when entering a level, please reset them when exiting.**
+- **Do not use FindObjectOfType to search for AceRadarBackend.** Instead:
+  - Assign a reference to AceRadarBackend in the Editor, or
+  - Place AceRadarBackend in the same GameObject as your script, or another GameObject in your mod, and use `GetComponent<AceRadarBackend>()`.
+- Refer to the section below for more details.
 
 **[ Ace Radar Processes ]**
 
@@ -52,3 +58,7 @@ The `AceRadarBackend.cs` script performs reflection behind the scenes, making Ac
 
 ### Public Methods
 
+**FindAndModifyTargetBlip**
+
+- `public void FindAndModifyTargetBlip(PrefabProxy enemyProxy, AceRadarSprites sprite, AceRadarColors color, bool rotatable = false)`
+- A convenient method that sets the marker of a target proxy object. A must-learn for map modders seeking to include Ace Radar functionality.
