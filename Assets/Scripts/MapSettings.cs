@@ -182,9 +182,19 @@
 
             for (int i = 0; i < keys.Length; i++)
             {
-                if (!Input.GetKeyDown(keys[i]) && keys[i] != KeyCode.None)
+                if (i < keys.Length - 1)
                 {
-                    return false;
+                    if (!Input.GetKey(keys[i]) && keys[i] != KeyCode.None)
+                    {
+                        return false;
+                    }
+                }
+                else    // i == keys.Length - 1
+                {
+                    if (!Input.GetKeyDown(keys[i]) && keys[i] != KeyCode.None)
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
@@ -204,7 +214,11 @@
 
                         while ((line = reader.ReadLine()) != null)
                         {
-                            keys.Add((KeyCode)Enum.Parse(typeof(KeyCode), line, true));
+                            KeyCode newKey = (KeyCode)Enum.Parse(typeof(KeyCode), line, true);
+                            if (newKey != KeyCode.None)
+                            {
+                                keys.Add(newKey);
+                            }
                         }
                         return new KeyCodeImportFormat(true, keys.ToArray());
                     }
