@@ -369,7 +369,7 @@
                     output = new Color(1f, 1f, 1f, 0.5f);
                     break;
                 case AceRadarColors.Red:
-                    output = new Color(1f, 0f, 0f, 0.5f);
+                    output = new Color(1f, 0.1f, 0.1f, 0.5f);
                     break;
                 case AceRadarColors.Blue:
                     output = new Color(0f, 0.5f, 1f, 0.5f);
