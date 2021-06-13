@@ -124,10 +124,7 @@
                     CheckNewItems();
                     NextCheckNewItems = IntervalCheckNewItems;
                 }
-                else
-                {
-                    NextCheckNewItems--;
-                }
+                NextCheckNewItems--;
 
                 SmoothResizeMap();
 
@@ -174,6 +171,12 @@
         // May be manually called to register non-supported component types.
         public RadarTarget AddTargetItem(Component c, Sprite s, Color sc, bool rot = false)
         {
+            if (c == null)
+            {
+                Debug.LogError("AddTargetItem: No Component provided, or the given Component does not exist!");
+                return null;
+            }
+
             GameObject newRadarBlip = Instantiate(TargetBlipPrefab, MapTargetsParent.transform);
             RadarBlipObjects.Add(newRadarBlip);
             Image newRadarBlipComponent = newRadarBlip.GetComponent<Image>();
@@ -209,6 +212,12 @@
         // Modifies blip of a single target
         public void ModifyTargetBlip(RadarTarget t, int i, Color sc, bool rot)
         {
+            if (t == null)
+            {
+                Debug.LogError("ModifyTargetBlip: No RadarTarget provided, or the given RadarTarget does not exist!");
+                return;
+            }
+
             t.blipComponent.sprite = SelectSprite(i);
             t.blipComponent.color = sc;
             t.blipRotatable = rot;
@@ -217,7 +226,13 @@
         // Removes a single target
         public void RemoveTargetItem(RadarTarget t)
         {
-            if (t.gameObject != null)
+            if (t == null)
+            {
+                Debug.LogError("RemoveTargetItem: No RadarTarget provided, or the given RadarTarget does not exist!");
+                return;
+            }
+
+            else if (t.gameObject != null)
             {
                 Debug.Log(string.Format("Unregistered a RadarTarget: {0} ({1})", t.gameObject.name, t.gameScriptType.Name));
             }
