@@ -61,4 +61,71 @@ The `AceRadarBackend.cs` script performs reflection behind the scenes, making Ac
 **FindAndModifyTargetBlip**
 
 - `public void FindAndModifyTargetBlip(PrefabProxy enemyProxy, AceRadarSprites sprite, AceRadarColors color, bool rotatable = false)`
-- A convenient method that sets the marker of a target proxy object. A must-learn for map modders seeking to include Ace Radar functionality.
+- A convenient method that sets the marker of a target proxy object. A must-learn for map and custom level modders seeking to include Ace Radar functionality.
+- `enemyProxy`: Ship, missile launcher, or AA tank proxy.
+- `sprite`: Blip sprite.
+- `color`: Blip color.
+- `rotatable`: Whether the blip rotates according to the target's relative heading.
+
+**SetDefaultBlipColor**
+
+- `public void SetDefaultBlipColor(AceRadarColors color)`
+- `color`: Preset color.
+
+**SetCheckInterval**
+
+- `public void SetCheckInterval(int fcount)`
+- `fcount`: AceRadar checks for new targets every this number of frames.
+
+**GetCheckInterval**
+- `public int GetCheckInterval()`
+- AceRadar checks for new targets every this number of frames.
+
+**AddTargetItem**
+
+- `public object AddTargetItem(Component component, AceRadarSprites sprite, AceRadarColors color, bool rotatable = false)`
+- Manually creates a new RadarTarget and adds it to the list. Use this to register unsupported types that are not automatically registered by Ace Radar.
+- Corresponds to `AceRadar.AddTargetItem( ... )`.
+- `component`: Component to register.
+- `sprite`: Blip sprite.
+- `color`: Blip color.
+- `rotatable`: Whether the blip rotates according to the target's relative heading.
+
+**RemoveTargetItem**
+
+- `public void RemoveTargetItem(object obj)`
+- Manually removes a RadarTarget from the list. Use this to manually remove unsupported types added by Ace Radar, without deleting its associated GameObject or Component.
+- Corresponds to `AceRadar.RemoveTargetItem( ... )`.
+- `obj`: RadarTarget, or the Component or GameObject associated with the RadarTarget.
+
+**ModifyTargetBlip**
+
+- `public void ModifyTargetBlip(object obj, AceRadarSprites sprite, AceRadarColors color, bool rotatable = false)`
+- Selects a RadarTarget and changes its blip style.
+- Corresponds to `AceRadar.ModifyTargetBlip( ... )`.
+- `obj`: RadarTarget, or the Component or GameObject associated with the RadarTarget.
+- `sprite`: Blip sprite.
+- `color`: Blip color.
+- `rotatable`: Whether the blip rotates according to the target's relative heading.
+
+**GetRadarTargetField**
+
+- `public object GetRadarTargetField(object obj, string fieldName)`
+- Get the value of a field in the given RadarTarget.
+- `obj`: RadarTarget, or the Component or GameObject associated with the RadarTarget.
+- `fieldName`: Name of the field to retrieve.
+
+**SetRadarTargetField**
+
+- `public void SetRadarTargetField(object obj, string fieldName, object value)`
+- Set the value of a field in the given RadarTarget.
+- `obj`: RadarTarget, or the Component or GameObject associated with the RadarTarget.
+- `fieldName`: Name of the field to select.
+- `value`: Value to write to the field.
+
+**FindTargetFromObject**
+
+- `public object FindTargetFromObject(object obj)`
+- Returns the RadarTarget associated with the object, or `obj` if none exists (useful for when `obj` is a RadarTarget).
+- This is used in most of the methods listed above, allowing a RadarTarget, or its associated Component or GameObject, to be passed.
+- `obj`: The Component or GameObject associated with the RadarTarget.
