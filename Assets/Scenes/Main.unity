@@ -419,6 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ZoomIn: 6d000000
   ZoomOut: 6e000000
+  HideMap: 68000000
   MapCanvasRect: {fileID: 1245396545}
   MapRootRect: {fileID: 2526488}
   MapFrameRenderer: {fileID: 1489932620}

@@ -18,6 +18,7 @@
         // ! Set the key combination in the Editor !
         [SerializeField] private KeyCode[] ZoomIn;
         [SerializeField] private KeyCode[] ZoomOut;
+        [SerializeField] private KeyCode[] HideMap;
 
         [SerializeField] private RectTransform MapCanvasRect;
         [SerializeField] private RectTransform MapRootRect;
@@ -31,6 +32,7 @@
 
         private string FileZoomIn = "KCZIN.TXT";
         private string FileZoomOut = "KCZOUT.TXT";
+        private string FileHideMap = "KCHIDE.TXT";
 
         private void Start()
         {
@@ -101,6 +103,12 @@
                 ZoomOut = importZout.keys;
             else
                 ExportKeyCode(Path.Combine(AceRadarPath, FileZoomOut), ZoomOut);
+
+            KeyCodeImportFormat importHide = ImportKeyCode(Path.Combine(AceRadarPath, FileHideMap), KeyControls.HideMap);
+            if (importHide.success)
+                HideMap = importHide.keys;
+            else
+                ExportKeyCode(Path.Combine(AceRadarPath, FileHideMap), HideMap);
 
             // Apply settings
 
@@ -174,6 +182,9 @@
                     break;
                 case KeyControls.ZoomOut:
                     keys = ZoomOut;
+                    break;
+                case KeyControls.HideMap:
+                    keys = HideMap;
                     break;
                 default:
                     Debug.LogError("Invalid or unimplemented KeyControls!");
@@ -256,7 +267,7 @@
 
         
 
-        public enum KeyControls { ZoomIn, ZoomOut }
+        public enum KeyControls { ZoomIn, ZoomOut, HideMap }
 
         private struct KeyCodeImportFormat
         {

@@ -126,7 +126,12 @@
                 }
                 NextCheckNewItems--;
 
+                // Key control operations
                 SmoothResizeMap();
+                if (MapSettings.GetKeyControlDown(MapSettings.KeyControls.HideMap))
+                {
+                    MapRootObject.SetActive(!MapRootObject.activeSelf);
+                }
 
                 // Update positions of radar blips
                 // (Draws all targets that are not destroyed)
