@@ -6,15 +6,17 @@ The `AceRadarBackend.cs` script performs reflection behind the scenes, making Ac
 
 **[ Terms of Use ]**
 
-- Users should not include AceRadar directly into SPMODs. Instead, AceRadarBackend should be used.
+- Users should not include AceRadar directly into SPMODs. Instead, AceRadarBackend or direct reflection should be used.
 - Users are free to use and modify AceRadarBackend for SPMODs.
-- Users may freely distribute AceRadarBackend or its derivatives.
+- Users may freely distribute AceRadarBackend, its derivatives, and original scripts that modify AceRadar.
 
 **[ Using the Backend ]**
 - **If values in AceRadar are modified when entering a level, please reset them when exiting.**
 - **Do not use FindObjectOfType to search for AceRadarBackend.** Instead:
   - Assign a reference to AceRadarBackend in the Editor, or
   - Place AceRadarBackend in the same GameObject as your script, or another GameObject in your mod, and use `GetComponent<AceRadarBackend>()`.
+- Ensure that the mod loading order is more than 900.
+- Do not get values from AceRadar in Awake().
 - Refer to the section below for more details.
 
 **[ Ace Radar Processes ]**
