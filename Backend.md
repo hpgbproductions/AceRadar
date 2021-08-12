@@ -17,6 +17,7 @@ The `AceRadarBackend.cs` script performs reflection behind the scenes, making Ac
   - Place AceRadarBackend in the same GameObject as your script, or another GameObject in your mod, and use `GetComponent<AceRadarBackend>()`.
 - Ensure that the mod loading order is more than 900.
 - Do not get values from AceRadar in Awake().
+- Do not add, modify, or remove GameObjects directly.
 - Refer to the section below for more details.
 
 **[ Ace Radar Processes ]**
