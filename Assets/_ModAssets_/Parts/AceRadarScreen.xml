@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Part name="AceRadarScreen">
+  <PartType id="Mod_AceRadar_AceRadarScreen" name="AceRadarScreen" modPrefabPath="Assets/_ModAssets_/Parts/AceRadarScreen.prefab" mass="10" health="100" damageDisconnect="true" sharesRigidBody="false" combineMeshes="false" disconnectForce="10" underwaterDragScalar="30" defaultMaterials="0,0,0,0">
+    <Modifiers>
+      <InputController defaultActivationGroup="0" defaultInput="16000*pow(2,VTOL)" defaultMax="1" defaultMin="-1" invertOnMirror="false" invertType="output" name="MapRadius" propertyEditorDesc="Map Radius" zeroOnDeactivate="false" />
+      <ModModifier id="AceRadar_AceRadarPart" type="AceRadarPart, AceRadar-Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <DefaultState _scaleWithInput="false" _sortOrder="0" _frameColorRed="1" _frameColorGreen="1" _frameColorBlue="1" _frameColorAlpha="0.6" />
+      </ModModifier>
+    </Modifiers>
+    <AttachPoints>
+      <AttachPoint adaptiveIgnore="false" a="1111" allowRotation="false" display="false" displayWhenDragged="false" fuselageConnection="false" ignoreGrid="false" ignoreSurface="false" jointType="Fixed" wingAttach="false" normal="0,0,1" position="0,0,0.0625" />
+    </AttachPoints>
+  </PartType>
+  <DesignerPart name="Radar Screen" category="Gizmos" description="Displays a copy of AceRadar in world space.">
+    <Assembly>
+      <Parts>
+        <Part id="1" partType="Mod_AceRadar_AceRadarScreen" position="0,0,0" rotation="0,0,0">
+          <InputController.State defaultActivationGroup="0" defaultInput="16000*pow(2,VTOL)" defaultMax="1" defaultMin="-1" invertOnMirror="false" invertType="output" name="MapRadius" propertyEditorDesc="Map Radius" zeroOnDeactivate="false" />
+        </Part>
+      </Parts>
+    </Assembly>
+  </DesignerPart>
+</Part>

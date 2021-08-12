@@ -1,24 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ModManifest buildID="15c22a7f-e2ba-4b49-8639-06462e383331">
-  <Mod name="Ace Radar" author="hpgbproductions" versionMajor="1" versionMinor="0" loadPriority="900" lastUpdated="2021-06-14T15:53:26.7793346Z" apiVersion="1.0.0.0" description="Ace Combat-styled radar. Marks ground targets, air targets, and weapons.&#xA;&#xA;External scripts may be used to change the style of markers, or manually register non-supported objects. View the mod page or repository for more information.&#xA;&#xA;Default controls:&#xA;Zoom Out: N&#xA;Zoom In: M&#xA;Toggle Map: H">
+<ModManifest buildID="3bd48c02-dc6f-4521-ab0d-ec24625d22ba">
+  <Mod name="Ace Radar" author="hpgbproductions" versionMajor="1" versionMinor="1" loadPriority="900" lastUpdated="2021-08-12T11:04:14.5532879Z" apiVersion="1.0.0.0" description="Ace Combat-styled radar UI and part. Marks ground targets, air targets, and weapons.&#xA;&#xA;External scripts may be used to change the style of markers, or manually register non-supported objects. View the mod page or repository for more information.&#xA;&#xA;Default controls:&#xA;Zoom Out: N&#xA;Zoom In: M&#xA;Toggle Map: H">
     <Steam title="" visibility="Public" previewPath="" language="English" tags="">
       <description></description>
     </Steam>
     <GameObjects>
       <GameObject name="AceRadar" path="Assets/_ModAssets_/AceRadar.prefab" />
+      <GameObject name="AceRadarScreen" path="Assets/_ModAssets_/Parts/AceRadarScreen.prefab" />
     </GameObjects>
     <Assets>
       <Asset path="Assets/Supply/aircraft-l.png" />
       <Asset path="Assets/Supply/aircraft-s.png" />
       <Asset path="Assets/Supply/ground-l.png" />
       <Asset path="Assets/Supply/ground-s.png" />
+      <Asset path="Assets/Supply/hitbox.mat" />
       <Asset path="Assets/Supply/line.png" />
       <Asset path="Assets/Supply/map_bg.png" />
       <Asset path="Assets/Supply/map_in.png" />
       <Asset path="Assets/Supply/map_out.png" />
       <Asset path="Assets/Supply/map_ring.png" />
     </Assets>
-    <MaterialShaderMap />
+    <MaterialShaderMap>
+      <Material name="hitbox" shader="Standard" />
+    </MaterialShaderMap>
     <Assemblies>
       <Assembly name="AceRadar-Assembly-CSharp.dll" path="Assets/_ModAssets_/AceRadar-Assembly-CSharp.dll.bytes" isProjectAssembly="true" />
     </Assemblies>
@@ -26,7 +30,9 @@
       <SimplePlanesMod apiVersion="1.0.0.0">
         <Maps />
         <Levels />
-        <Parts />
+        <Parts>
+          <Part name="AceRadarScreen" prefabPath="Assets/_ModAssets_/Parts/AceRadarScreen.prefab" xmlPath="Assets/_ModAssets_/Parts/AceRadarScreen.xml" />
+        </Parts>
         <DesignerPlugins />
         <MapPlugins />
         <PersistentObjects>

@@ -12,12 +12,16 @@
     {
         [SerializeField] private MapSettings MapSettings;
 
+        // Main radar
         [SerializeField] private Canvas MapCanvas;
         [SerializeField] private GameObject MapRootObject;
         [SerializeField] private GameObject MapTargetsParent;
         [SerializeField] private GameObject TargetBlipPrefab;
         [SerializeField] private Transform PlayerAircraftTransform;
         [SerializeField] private RectTransform MapRingsTransform;
+
+        // Parts
+        private List<AceRadarPartBehaviour> PartsBehaviors = new List<AceRadarPartBehaviour>();
 
         [SerializeField] private Sprite Air_s;
         [SerializeField] private Sprite Air_l;
@@ -105,11 +109,27 @@
             if (InSandboxCurrent && !InSandboxPrevious)
             {
                 MapRootObject.SetActive(true);
+
+                // Check for AceRadarParts in PlayerAircraft.Parts
+                List<GameObject> partObjects = ServiceProvider.Instance.PlayerAircraft.Parts;
+                foreach (GameObject partObject in partObjects)
+                {
+                    AceRadarPartBehaviour partComponent = partObject.GetComponent<AceRadarPartBehaviour>();
+                    if (partComponent != null)
+                    {
+                        PartsBehaviors.Add(partComponent);
+                        Debug.Log("Added AceRadarPartBehavior: " + partComponent.ToString());
+                    }
+                }
             }
             // Exited the sandbox
             else if (!InSandboxCurrent && InSandboxPrevious)
             {
                 MapRootObject.SetActive(false);
+
+                // Clear AceRadarParts
+                Debug.LogFormat("Cleared {0} AceRadarPartBehaviors", PartsBehaviors.Count);
+                PartsBehaviors.Clear();
 
                 // Clear item list
                 Debug.Log(string.Format("Cleared {0} RadarTargets", RadarTargets.Count));
@@ -121,13 +141,35 @@
             {
                 if (NextCheckNewItems <= 0)
                 {
+                    // Check for new RadarTargets
                     CheckNewItems();
                     NextCheckNewItems = IntervalCheckNewItems;
                 }
                 NextCheckNewItems--;
 
+                // Remove missing parts (e.g. destroyed in sandbox)
+                foreach (AceRadarPartBehaviour part in PartsBehaviors.ToArray())
+                {
+                    if (part == null)
+                    {
+                        int partIndex = PartsBehaviors.IndexOf(part);
+                        foreach (RadarTarget target in RadarTargets)
+                        {
+                            target.partsBlipObjects.RemoveAt(partIndex);
+                            target.partsBlipComponents.RemoveAt(partIndex);
+                        }
+                        PartsBehaviors.Remove(part);
+                    }
+                }
+
                 // Key control operations
                 SmoothResizeMap();
+                foreach (AceRadarPartBehaviour part in PartsBehaviors)
+                {
+                    if (!part.MapRadiusUsesInputController)
+                        part.MapRadius = this.MapRadius;
+                }
+
                 if (MapSettings.GetKeyControlDown(MapSettings.KeyControls.HideMap))
                 {
                     MapRootObject.SetActive(!MapRootObject.activeSelf);
@@ -142,30 +184,72 @@
                     if (target.CheckDeleted())
                     {
                         target.blipObject.SetActive(false);
+                        if (target.partsBlipObjects.Count > 0)
+                        {
+                            foreach (GameObject blip in target.partsBlipObjects)
+                            {
+                                blip.SetActive(false);
+                            }
+                        }
                         RemoveTargetItem(target);
                     }
                     else if (target.CheckShouldHideBlip())
                     {
                         target.blipObject.SetActive(false);
+                        if (target.partsBlipObjects.Count > 0)
+                        {
+                            foreach (GameObject blip in target.partsBlipObjects)
+                            {
+                                blip.SetActive(false);
+                            }
+                        }
                     }
                     else
                     {
                         target.blipObject.SetActive(true);
+                        if (target.partsBlipObjects.Count > 0)
+                        {
+                            foreach (GameObject blip in target.partsBlipObjects)
+                            {
+                                blip.SetActive(true);
+                            }
+                        }
+
                         Vector3 targetPos = target.GetPosition();
                         Vector3 targetRelPos = PlayerAircraftTransform.InverseTransformVector(targetPos - PlayerAircraftTransform.position);
-                        target.blipObject.transform.localPosition = new Vector3(
-                            targetRelPos.x * 256f / MapRadius,
-                            targetRelPos.z * 256f / MapRadius,
-                            0f);
 
-                        // Rotation for supported sprites
-                        if (target.blipRotatable)
+                        Vector3 blipLocalPositionUnscaled = new Vector3(
+                            targetRelPos.x * 256f,
+                            targetRelPos.z * 256f,
+                            0f);
+                        Vector3 blipLocalPosition = blipLocalPositionUnscaled / MapRadius;
+
+                        Vector3 blipLocalEulerAngles = Vector3.zero;
+                        if (target.blipRotatable)    // Rotates specific sprites
                         {
                             float targetRot = target.GetEulerAngles().y;
-                            target.blipObject.transform.localEulerAngles = new Vector3(
+                            blipLocalEulerAngles = new Vector3(
                                 0f,
                                 0f,
                                 PlayerAircraftTransform.eulerAngles.y - targetRot);
+                        }
+
+                        // Set transform on screen map
+                        target.blipObject.transform.localPosition = blipLocalPosition;
+                        target.blipObject.transform.localEulerAngles = blipLocalEulerAngles;
+
+                        // Set transform on part maps
+                        if (target.partsBlipObjects.Count > 0)
+                        {
+                            for (int i = 0; i < target.partsBlipObjects.Count; i++)
+                            {
+                                if (PartsBehaviors[i].MapRadiusUsesInputController)
+                                    target.partsBlipObjects[i].transform.localPosition = blipLocalPositionUnscaled / PartsBehaviors[i].MapRadius;
+                                else
+                                    target.partsBlipObjects[i].transform.localPosition = blipLocalPosition;
+
+                                target.partsBlipObjects[i].transform.localEulerAngles = blipLocalEulerAngles;
+                            }
                         }
                     }
                 }
@@ -189,7 +273,7 @@
             newRadarBlipComponent.color = sc;
             RadarBlipComponents.Add(newRadarBlipComponent);
 
-            RadarTarget newRadarTarget = new RadarTarget(c, newRadarBlip, newRadarBlipComponent, rot);
+            RadarTarget newRadarTarget = new RadarTarget(c, newRadarBlip, newRadarBlipComponent, rot, PartsBehaviors);
             RadarTargets.Add(newRadarTarget);
 
             Debug.Log(string.Format("Registered new RadarTarget: {0} ({1})", newRadarTarget.gameObject.name, newRadarTarget.gameScriptType.Name));
@@ -217,7 +301,7 @@
         // Modifies blip of a single target
         public void ModifyTargetBlip(RadarTarget t, int i, Color sc, bool rot)
         {
-            if (t == null)
+            if (t == null || !RadarTargets.Contains(t))
             {
                 Debug.LogError("ModifyTargetBlip: No RadarTarget provided, or the given RadarTarget does not exist!");
                 return;
@@ -226,12 +310,19 @@
             t.blipComponent.sprite = SelectSprite(i);
             t.blipComponent.color = sc;
             t.blipRotatable = rot;
+
+            if (t.partsBlipComponents.Count > 0)
+                foreach (Image image in t.partsBlipComponents)
+                {
+                    image.sprite = SelectSprite(i);
+                    image.color = sc;
+                }
         }
 
         // Removes a single target
         public void RemoveTargetItem(RadarTarget t)
         {
-            if (t == null)
+            if (t == null || !RadarTargets.Contains(t))
             {
                 Debug.LogError("RemoveTargetItem: No RadarTarget provided, or the given RadarTarget does not exist!");
                 return;
@@ -250,6 +341,11 @@
             RadarBlipObjects.Remove(t.blipObject);
             RadarBlipComponents.Remove(t.blipComponent);
             Destroy(t.blipObject);
+            if (t.partsBlipObjects.Count > 0)
+                foreach (GameObject partBlipObject in t.partsBlipObjects)
+                {
+                    Destroy(partBlipObject);
+                }
         }
 
         // Removes all listed targets
@@ -423,10 +519,13 @@
         public Image blipComponent;
         public bool blipRotatable;
 
+        public List<GameObject> partsBlipObjects = new List<GameObject>();
+        public List<Image> partsBlipComponents = new List<Image>();
+
         public bool targetDestroyed;
         public bool? forceShouldHideBlip;
 
-        public RadarTarget(Component script, GameObject bo, Image bc, bool rot = false)
+        public RadarTarget(Component script, GameObject bo, Image bc, bool rot = false, List<AceRadarPartBehaviour> parts = null)
         {
             gameObject = script.gameObject;
             transform = script.transform;
@@ -451,6 +550,17 @@
                         refGameScript = c;
                         refGameScriptType = c.GetType();
                     }
+                }
+            }
+
+            if (parts != null && parts.Count > 0)
+            {
+                // Copy blips to parts
+                foreach (AceRadarPartBehaviour part in parts)
+                {
+                    GameObject copyObject = GameObject.Instantiate(blipObject, part.MapTargetsParent.transform);
+                    partsBlipObjects.Add(copyObject);
+                    partsBlipComponents.Add(copyObject.GetComponent<Image>());
                 }
             }
         }
